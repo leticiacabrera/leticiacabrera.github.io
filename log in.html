@@ -4,12 +4,20 @@
       <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/floating-labels.css" rel="stylesheet">
+      <script src="js/log in.js"></script>
       <meta name="google-signin-client_id" content="955981190126-isev36peo287og3j199l05ikvumf6rf6.apps.googleusercontent.com">
       <!--Meta con el ID de cliente google-->
-      <meta name = "google-signin-scope" content = "profile email" >
-      <script src="js/log in.js"></script>
-      <script src="https://apis.google.com/js/platform.js" async defer></script> <!--Login google-->
       
+      <script src="https://apis.google.com/js/platform.js" async defer></script> <!--Login google-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <style>
+        .g-singin2{
+          margin-left: 500px;
+          margin-top: 200px;
+        }
+      </style>
   </head>
   
   <body>
@@ -45,10 +53,9 @@
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2019</p>
       
     </form>
-    <div id="profileinfo"></div>
-    <div clase = "g-signin2" datos-onSuccess = "onSignIn " data-theme = " dark "></div>
+    
+    <div clase = "g-signin2" datos-onSuccess = "onSignIn "></div>
 
-    <a href="#" onclick="singOut();">Sing out</a>
 
     
   </body>
