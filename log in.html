@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
       <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/floating-labels.css" rel="stylesheet">
+      <meta name="google-signin-client_id" content="955981190126-isev36peo287og3j199l05ikvumf6rf6.apps.googleusercontent.com">
+      <!--Meta con el ID de cliente google-->
+      <meta name = "google-signin-scope" content = "profile email" >
+      
   </head>
+  
   <body>
     
     <form class="form-signin" action="index.html">
@@ -30,10 +35,20 @@
       </div>
       
       <button class="btn btn-lg btn-primary btn-block" type="submit" id="iniciar_sesion" onclick="set()" >Iniciar sesión</button>
-        
-      
+      <br/>
+      <!--<div class="g-signin2" data-onsuccess="onSignIn">
+        <button class="btn btn-lg btn-primary btn-block"><img src="img/imagen google.png" alt=""/></button>
+      </div> -->
+
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2019</p>
-      <script src="js/log in.js"></script>
+      
     </form>
+    <div id="profileinfo"></div>
+    <div clase = "g-signin2" datos-onSuccess = "onSignIn " data-theme = " dark "></div>
+
+    <a href="#" onclick="singOut();">Sing out</a>
+
+    <script src="js/log in.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script> <!--Login google-->
   </body>
 </html>
