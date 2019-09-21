@@ -39,7 +39,8 @@
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="cart.html" style="color: black">Ver mi carrito</a>
-                        <a class="dropdown-item" href="log in.html" style="color: black">Cerrar sesión</a>
+                        <a class="dropdown-item" href="log in.html" onclick="signOut();" style="color: black">Cerrar sesión</a>
+
                       </div>
                     </div>
                   </li>
@@ -126,8 +127,15 @@
         <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
       </div>
     </footer>
+    <script>
+        function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+          });
+        }
+    </script>
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="js/log in menu.js"></script>
   </body>
 </html>
