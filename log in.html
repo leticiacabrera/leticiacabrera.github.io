@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/floating-labels.css" rel="stylesheet">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/floating-labels.css" rel="stylesheet">
+        
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="955981190126-isev36peo287og3j199l05ikvumf6rf6.apps.googleusercontent.com">
+        <!--Meta con el ID de cliente google-->
+
+        <script src="https://apis.google.com/js/platform.js" async defer></script> <!--Login google-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
     
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="955981190126-isev36peo287og3j199l05ikvumf6rf6.apps.googleusercontent.com">
-    <!--Meta con el ID de cliente google-->
+    <body>
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script> <!--Login google-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <form class="form-signin" action="index.html">
+            <div class="text-center mb-4">
+                <img class="mb-4" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h1 class="h1 mb-3 font-weight-bold">e-MERCADO</h1>
+                <p>Tu e-commerce favorito</p>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                <label for="inputEmail">Usuario</label> <!--junto con el elemento <label> el atributo for especifica a que elemento de formulario está vinculada una etiqueta-->
+            </div>
 
-</head>
-  
-<body>
+            <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Contraseña</label>
+            </div>
 
-    <form class="form-signin" action="index.html">
-        <div class="text-center mb-4">
-            <img class="mb-4" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-            <h1 class="h1 mb-3 font-weight-bold">e-MERCADO</h1>
-            <p>Tu e-commerce favorito</p>
-        </div>
-        <div class="form-label-group">
-            <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-            <label for="inputEmail">Usuario</label> <!--junto con el elemento <label> el atributo for especifica a que elemento de formulario está vinculada una etiqueta-->
-        </div>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Recordar
+                </label>
+            </div>
 
-        <div class="form-label-group">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <label for="inputPassword">Contraseña</label>
-        </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="iniciar_sesion" onclick="set()">Iniciar sesión</button>
+            <br />
+            <!--<div class="g-signin2" data-onsuccess="onSignIn">
+            <button class="btn btn-lg btn-primary btn-block"><img src="img/imagen google.png" alt=""/></button>
+            </div> -->
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Recordar
-            </label>
-        </div>
+            <p class="mt-5 mb-3 text-muted text-center">&copy; 2019</p>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit" id="iniciar_sesion" onclick="set()">Iniciar sesión</button>
-        <br />
-        <!--<div class="g-signin2" data-onsuccess="onSignIn">
-          <button class="btn btn-lg btn-primary btn-block"><img src="img/imagen google.png" alt=""/></button>
-        </div> -->
+        </form>
 
-        <p class="mt-5 mb-3 text-muted text-center">&copy; 2019</p>
+        <div class="g-signin2" class="btn btn-primary" data-onsuccess="onSignIn" data-theme="dark" ></div>
+        
+        <script src="js/log in.js"></script>
 
-    </form>
-
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" class="btn btn-lg btn-primary btn-block"></div>
-    
-    <script src="js/log in.js"></script>
-
-</body>
+    </body>
 </html>
