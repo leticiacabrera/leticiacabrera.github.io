@@ -1,12 +1,14 @@
-function set(){
+/*function set(){
     /*Captura de datos escrito en el input*/        
-    var email = document.getElementById("inputUsername").value;
+   /* var email = document.getElementById("inputUsername").value;
     /*Guardando los datos en el LocalStorage*/
-    localStorage.setItem("Username", email);
+     /*localStorage.setItem("Username", email);
 };
 
 /*google login*/
 
+var profile = googleUser . getBasicProfile ();
+var id_token = googleUser . getAuthResponse (). id_token ;
 
 function onSignIn(googleUser) {
     // Useful data for your client-side scripts:
