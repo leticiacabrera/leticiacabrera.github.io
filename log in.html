@@ -39,8 +39,15 @@
               var id_token = googleUser.getAuthResponse().id_token;
               console.log("ID Token: " + id_token);
 
-              window.location.href = "index.html";
+              
             }
+
+            function redirect(onSignIn(googleUser)) {
+                if result.status = "ok" {
+                    window.location.href = "index.html";
+                }
+            }
+            redirect()
 
         </script>
 
