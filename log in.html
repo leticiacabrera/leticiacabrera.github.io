@@ -40,7 +40,7 @@
                 console.log("ID Token: " + id_token);
                 
                 function redirect() {
-                    if (console.log(id_token)) {
+                    if onSignIn(googleUser) == True {
                         window.location.href = "index.html";
                     }
                 }
