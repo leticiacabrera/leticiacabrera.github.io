@@ -1,5 +1,5 @@
 function get(){
-    var email = localStorage.getItem("Username"); //Obtener datos almacenados
-    document.getElementById("dropdownMenuButton").innerHTML = email; //Mostrar datos almacenados
+    var name = localStorage.getItem("g-signin2"); //Obtener datos almacenados
+    document.getElementById("dropdownMenuButton").innerHTML = name; //Mostrar datos almacenados
 };
 get();
