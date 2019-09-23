@@ -16,7 +16,7 @@
     
     <body>
 
-        <form class="form-signin" action="index.html" >
+        <form class="form-signin">
             <div class="text-left mb-4">
                 <h1 class="h1 mb-3 font-weight-bold">e-MERCADO</h1>
                 <p>Tu e-commerce favorito</p>
@@ -38,9 +38,17 @@
                 // The ID token you need to pass to your backend:
                 var id_token = googleUser.getAuthResponse().id_token;
                 console.log("ID Token: " + id_token);
-                
+
+                function set(){
+                    /*Captura de datos del usuario de gmail*/        
+                    var name = console.log(profile.getName()).value;
+                    /*Guardando los datos en el LocalStorage*/
+                    localStorage.setItem(g-signin2, name);
+                };
+
                 window.location.href = "index.html";
             }
+            
         </script>
 
     </body>
