@@ -11,7 +11,7 @@
     <meta name="google-signin-client_id" content="955981190126-isev36peo287og3j199l05ikvumf6rf6.apps.googleusercontent.com">
     <!--Meta con el ID de cliente google-->
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script> <!--Login google-->
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> <!--Login google-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
@@ -45,7 +45,7 @@
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="cart.html" style="color: black">Ver mi carrito</a>
-                        <a class="dropdown-item" href="#" style="color: black" onclick="signOut()">Cerrar sesión</a>
+                        <a class="dropdown-item" href="log in.html" style="color: black" onclick="signOut()">Cerrar sesión</a>
 
                       </div>
                     </div>
@@ -134,12 +134,18 @@
       </div>
     </footer>
     <script>
-        function signOut() {
-          var auth2 = gapi.auth2.getAuthInstance();
-          auth2.signOut().then(function () {
-            console.log('User signed out.');
-          });
-        }
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
+
+      function onLoad() {
+        gapi.load('auth2', function() {
+          gapi.auth2.init();
+        });
+      }
     </script>
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
