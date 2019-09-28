@@ -45,8 +45,13 @@
                     /*Guardando los datos en el LocalStorage*/
                     localStorage.setItem(g-signin2, name);
                 };
+                function redireccion() {
+                    if (console.log("ID: " + profile.getId())) {
+                        window.location.href = "index.html";
+                    }
+                }
+                redireccion();
 
-                window.location.href = "index.html";
             }
             
         </script>
